@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyLinux - Open Source OS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f111a;
+      color: #f4f4f4;
+      overflow-x: hidden;
+    }
+    header {
+      background: #1a1c2c;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00ffae;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    nav {
+      background: #2a2d3e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+    nav a {
+      color: #00ffae;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cta {
+      background: #00ffae;
+      color: #0f111a;
+      padding: 1rem 2rem;
+      display: inline-block;
+      margin-top: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .cta:hover {
+      background: #00d89c;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1a1c2c;
+      color: #888;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to MyLinux</h1>
+    <p>A blazing-fast, customizable, and community-driven Linux distro</p>
+  </header>
+
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#get-started">Get Started</a>
+    <a href="#community">Community</a>
+  </nav>
+
+  <section id="features">
+    <h2>🚀 Features</h2>
+    <ul>
+      <li>Minimalist core with modular extensions</li>
+      <li>Lightning-fast boot and performance</li>
+      <li>Privacy-first architecture</li>
+      <li>Built by and for developers</li>
+    </ul>
+  </section>
+
+  <section id="get-started">
+    <h2>📦 Get Started</h2>
+    <p>Ready to dive in? Download the latest ISO and explore the power of MyLinux.</p>
+    <a class="cta" href="mylinux.iso">Download Now</a>
+  </section>
+
+  <section id="community">
+    <h2>🌐 Join the Community</h2>
+    <p>Connect with fellow users and developers. Share ideas, get support, and help shape the future of MyLinux.</p>
+    <a class="cta" href="#">Join Discord</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyLinux Project. Open source. Forever.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
+
