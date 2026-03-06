@@ -1,7 +1,7 @@
                                                                         Mylinux
 This is the readme for the project Mylinux by pro1234123. This is a cli only distro only for experienced users and learners who know basics but still should use it in a vm.
 
-THE GPL-2 LICENSE IS FOR THE LINUX KERNEL AND BUSYBOX WHEREAS ALL THE OTHER SCRIPS MADE BY ME IN THE ISO ARE GPL-3 LICENSED. YOU CAN REDISTRIBUTE THEM FREELY
+THE GPL-2 LICENSE IS FOR THE LINUX KERNEL AND BUSYBOX WHEREAS ALL THE OTHER SCRIPTS MADE BY ME IN THE ISO ARE GPL-3 LICENSED. YOU CAN REDISTRIBUTE THEM FREELY
 
 Overview:
 MyLinux is a lightweight, command-line–based Linux distribution developed by the MyLinux Development Team. Designed for advanced users and open-source enthusiasts, it offers a minimal environment with full customizability and ultra-low system requirements.
